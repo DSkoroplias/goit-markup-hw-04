@@ -9,6 +9,7 @@
     --secondary-bg-color: #2f303a;
     --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --social-icon-color: #afb1b8;
 }
 
 .visually-hidden {
@@ -96,7 +97,7 @@ address {
 }
 
 .logo {
-    margin-right: 93px;
+    margin-right: 156px;
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
@@ -124,7 +125,6 @@ address {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -143,6 +143,9 @@ address {
 }
 
 .contacts-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 32px 0;
     font-weight: 500;
     line-height: 1.14;
@@ -155,19 +158,34 @@ address {
     color: var(--accent-color);
 }
 
+.contacts-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
 .current {
     color: var(--accent-color);
 }
+
 /* <!--  /Header content--> */
 
 /* <!-- Main content--> */
 
 /* <!-- Hero content --> */
 .hero {
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
     padding-top: 200px;
-    background-color: var(--secondary-bg-color);
+    height: 600px;
+    margin: 0 auto;
     text-align: center;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
@@ -213,6 +231,17 @@ address {
     flex-basis: calc((100% - 90px) / 4);
 }
 
+.feature-bg {
+    background-color: var(--primary-bg-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.feature-icon {
+    height: 120px;
+    padding: 20px 100px;
+}
+
 .feauture-title {
     margin-bottom: 10px;
     font-size: 14px;
@@ -244,6 +273,12 @@ address {
 .work-item,
 .portfolio-list {
     flex-basis: calc((100% - 60px) / 3);
+}
+
+.portfolio-list:hover {
+    /* border: 1px solid #eeeeee; */
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* <!-- /Work content  --> */
 
@@ -277,19 +312,108 @@ address {
 }
 
 .card-post {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-item {
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+}
+.social-icon {
+    fill: var(--auxiliary-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: var(--auxiliary-color);
+}
+
+.social-list-justify-content {
+    justify-content: flex-start;
+}
+
+.color-icon {
+    fill: var(--social-icon-color);
+}
+
+.color-icon-bg {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
 /* <!-- /Team content --> */
+
+/* <!-- Client content --> */
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client-item {
+}
+
+.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--social-icon-color);
+    border-radius: 4px;
+    background-color: var(--auxiliary-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.client-icon {
+    fill: var(--social-icon-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: var(--accent-color);
+}
+
+/* <!-- /Client content --> */
 
 /* <!-- Footer content --> */
 .footer {
     padding-bottom: 60px;
     padding-top: 60px;
     background: #2f303a;
+}
+
+.footer-flex-container {
+    display: flex;
 }
 
 .logo-studio-footer {
@@ -316,6 +440,20 @@ address {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
+
+.footer-icon-wrapper {
+    padding-top: 10px;
+}
+
+.social-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--auxiliary-color);
+}
+
 /* <!-- /Footer content --> */
 
 /* <!-- Portfolio content --> */
